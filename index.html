@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./style.css">
+  
+  <title>Interactive rating component</title>
+
+</head>
+<body>
+
+  <main>
+
+    <div class="star-icon">
+      <img src="./images/icon-star.svg">
+    </div>
+
+    <div class="feedback-question">
+      <h2>How did we do?</h2>
+
+      <p>
+        Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!
+      </p>
+    </div>
+
+    <div class="rating">
+      <input type="button" id="1" onclick="selectRating(this.id);" class="rating-button" value="1">
+      <input type="button" id="2" onclick="selectRating(this.id);" class="rating-button" value="2">
+      <input type="button" id="3" onclick="selectRating(this.id);" class="rating-button" value="3">
+      <input type="button" id="4" onclick="selectRating(this.id);" class="rating-button" value="4">
+      <input type="button" id="5" onclick="selectRating(this.id);" class="rating-button" value="5">  
+    </div>
+
+    <div class="submit">
+      <input type="button" onclick="submitRating();" value="SUBMIT">
+    </div>
+
+  </main>
+  
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://github.com/sayanibiswas00" target="_blank">Sayani Biswas</a>.
+    </div>
+  </footer>
+  <script>
+    let focusElement = 0;
+
+    function selectRating(id){
+        document.getElementById(id).focus();
+        focusElement = document.activeElement.id;
+    }
+
+    function submitRating(){
+        localStorage.setItem("rate", focusElement);
+        window.open("thankyoupage.html", "_self");
+    }
+
+  </script>
+</body>
+</html>

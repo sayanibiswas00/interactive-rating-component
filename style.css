@@ -1,0 +1,198 @@
+body{
+    color: white;
+    background-color: hsl(216, 12%, 8%);
+    font-family: 'Overpass', sans-serif;
+}
+
+main{
+    background-color: hsl(212, 20%, 15%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: auto;
+    width: auto;
+    border-radius: 22px;
+}
+
+h2{
+    font-size: 1.6em;
+}
+
+.attribution{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+}
+
+.attribution a:link, .attribution a:active, .attribution a:visited{
+    color: white;
+    text-decoration: none;
+}
+
+.attribution a:hover{
+    color: hsl(25, 97%, 53%);
+    text-decoration: none;
+}
+
+/* CSS for the rating page */
+
+.star-icon{
+    position: relative;
+    background-color: #353940;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: 0;
+    border-style: solid;
+    margin: 25px;
+}
+
+.star-icon img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    height: 15px;
+    width: 15px;
+}
+
+.feedback-question{
+    width: 320px;
+    letter-spacing: 0.4px;
+    padding: 0 1.5em;
+}
+
+.feedback-question p{
+    font-weight: 400;
+    font-size: 15px;
+    color: rgb(189, 187, 187);
+}
+
+.rating{
+    display: flex;
+    justify-content: center;
+    padding: 1em 0;
+}
+
+.rating-button{
+    font-family: 'Overpass', sans-serif;
+    font-weight: 700;
+    background-color: #353940;
+    height: 40px;
+    width: 40px;
+    display: inline;
+    border-radius: 50%;
+    border: 0;
+    border-style: solid;
+    font-size: 15px;
+    color: gray;
+    margin: 0 12px;
+}
+
+.rating-button:hover{
+    cursor: pointer;
+    background-color: hsl(25, 97%, 53%);
+    color: white;
+}
+
+.rating-button:focus{
+    background-color: rgb(125, 125, 125);
+    color: white;
+}
+
+.submit{
+    display: flex;
+    justify-content: center;
+}
+
+.submit input{
+    width: 80%;
+    background-color: hsl(25, 97%, 53%);
+    color: white;
+    padding: 10px;
+    margin: 0.5em 0 2em;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    border-radius: 50px;
+    border: 0;
+    border-style: solid;
+}
+
+.submit input:hover{
+    cursor: pointer;
+    background-color: white;
+    color: hsl(25, 97%, 53%);
+}
+
+/* CSS for the thank you page */
+
+.thankyou-img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 110px;
+    width: 170px;
+    padding: 2.5em 0 1em;
+}
+
+.user-rating{
+    text-align: center;
+    background-color: #353940;
+    border-radius: 50px;
+    border: 0;
+    border-style: solid;
+    color: hsl(25, 97%, 53%);
+    width: 45%;
+    margin: auto;
+}
+
+.user-rating p{
+    padding: 5px 2px 2px;
+}
+
+.thankyou-text{
+    text-align: center;
+    width: 360px;
+    letter-spacing: 0.4px;
+    padding: 0 1.5em 1.5em;
+    margin: auto;
+}
+
+.thankyou-text h2{
+    padding-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.thankyou-text p{
+    font-size: 15px;
+    color: rgb(189, 187, 187);
+    line-height: 22px;
+    margin-top: 0.3em;
+}
+
+/* For smaller viewport */
+
+@media(max-width: 375px){
+    main{
+        width: 95%;
+    }
+    .feedback-question{
+        width: 85%;
+    }
+    .rating-button{
+        height: 30px;
+        width: 30px;
+        font-size: 10px;
+        margin: 0 10px;
+    }
+    .user-rating{
+        width: 52%;
+    }
+    .thankyou-text{
+        width: 80%;
+    }
+}
